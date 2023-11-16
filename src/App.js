@@ -135,9 +135,12 @@ const App = () => {
           <h1>Todo List</h1>{" "}
           <form>
             <input
+              id="username"
+              name="username"
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              autoComplete="on"
             />
           </form>
           <button onClick={getTodos}>Get Todos</button>
@@ -161,6 +164,9 @@ const App = () => {
         </div>
       )}
       <input
+        type="text"
+        id="todo"
+        name="todo"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
         placeholder="New todo"
@@ -170,7 +176,7 @@ const App = () => {
 
       <button onClick={getAllUsers}>Get All Users</button>
       <div style={styles.listContainer}>
-        <ul style={{ width: "100%" }}>
+        <ul id="users-list" style={{ width: "100%" }}>
           {users.map((user, index) => (
             <li key={index} style={styles.listItem}>
               <div>{user}</div>

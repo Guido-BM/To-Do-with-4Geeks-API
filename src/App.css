@@ -16,3 +16,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+#users-list {
+  overflow-y: scroll;
+  max-height: 300px; /* adjust this value as needed */
+}
